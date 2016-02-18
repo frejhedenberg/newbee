@@ -26,8 +26,9 @@
         {.or}
 
           {.section collection}
+		  	<!-- BB -->{.if collection.homepage}{.or}
             <a href="{fullUrl}">{navigationTitle}</a>
-          {.end}
+          {.end}{.end}
 
           {.section externalLink}
             <a href="{url}"{.section newWindow} target="_blank"{.end}>{title}</a>
