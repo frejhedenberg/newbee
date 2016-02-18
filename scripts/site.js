@@ -208,8 +208,6 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
 
     setupGalleries: function() {
 
-      if (this.getBodyWidth() < MOBILE_GALLERY_BREAKPOINT) {
-
         Y.all('#slideshow .slide img[data-src]').each(function(img) {
           ImageLoader.load(img, {
             load: true
@@ -250,55 +248,7 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
           }, 100);
         }
 
-      } else {
-
-        if (Y.one('body.enable-gallery-thumbnails.initial-gallery-view-thumbnails') || Y.one('body.enable-gallery-thumbnails.homepage.homepage-gallery-view-thumbnails')) {
-          if (!Y.one('body.enable-gallery-thumbnails.homepage.homepage-gallery-view-slideshow')) {
-            if (window.location.hash) {
-              this.setupSlideshow();
-              Y.later(100, this, function() {
-                Y.one('body').removeClass('thumbnail-view').set('scrollTop', 0);
-                this.slideshow.refresh();
-                Y.all(".sqs-video-wrapper").each(function(video) { video.videoloader.reload(); });
-                this.checkHeaderHeight();
-              });
-            } else {
-              this.showThumbnails();
-            }
-          } else {
-            this.setupSlideshow();
-          }
-        } else {
-          this.setupSlideshow();
-        }
-
-        Y.all('.thumbnail-toggle').each(function(node) {
-          node.on('click', function(e){
-            this.showThumbnails();
-          }, this);
-        }, this);
-
-        // if you click on a gallery thumb
-        Y.one('#thumbnails').delegate('click', function(e){
-          var index = Y.all('.thumb').indexOf(e.currentTarget);
-
-          if (!this.slideshow) {
-            this.setupSlideshow(index);
-          } else {
-            this.slideshow.set('currentIndex', index);
-          }
-
-          Y.later(100, this, function() {
-            Y.one('body').removeClass('thumbnail-view').set('scrollTop', 0);
-            this.slideshow.refresh();
-            Y.all(".sqs-video-wrapper").each(function(video) { video.videoloader.reload(); });
-            this.checkHeaderHeight();
-            history.pushState && history.pushState('itemId', null, Y.one('.sqs-active-slide').getData('slide-url'));
-          });
-
-        }, '.thumb', this);
-
-      }
+    
 
       Y.one('#galleryWrapper .meta').setStyle('opacity', 1);
 
