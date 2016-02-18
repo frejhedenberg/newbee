@@ -4,7 +4,7 @@
     <div id="slideshow" class="slideshow">
     	{.repeated section items}
     		<div class="slide{.video?} video-slide{.end}" data-slide-id="{id}" data-slide-url="{urlId}">
-          {.image?}{@|image load-false{.if {originalSize|height} > {originalSize|width}}port{.end}}{.end}
+          {.image?}{@|image load-false}{.end}
           {.video?}{@|video load-false}{.end}
           {.section title}<div class="image-title-mobile"><strong>{@}</strong></div>{.end}
           {.section body}<div class="image-desc-mobile">{@}</div>{.end}
