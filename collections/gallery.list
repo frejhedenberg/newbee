@@ -1,5 +1,6 @@
 <div id="galleryWrapper">
 
+  <div id="slideshowWrapper" class="{.section items}{.has-multiple?}{.or}single-image{.end}{.end}">
     <div id="slideshow" class="slideshow">
     	{.repeated section items}
     		<div class="slide{.video?} video-slide{.end}" data-slide-id="{id}" data-slide-url="{urlId}">
@@ -10,8 +11,7 @@
         </div>
     	{.end}
     </div>
-
-
+  
   <div class="meta">
 
     <div id="imageData">
@@ -25,7 +25,7 @@
       {.end}
     </div>
 
- 
+  </div>
 
 </div>
 
