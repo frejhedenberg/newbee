@@ -1,4 +1,5 @@
 Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) {
+      this.slideshow = null;
 
   var MOBILE_GALLERY_BREAKPOINT = 800;
 
