@@ -116,7 +116,7 @@
       var k = jQuery('.slide').get().sort(function(){ 
   return Math.round(Math.random())-0.5
 })
-        $(k).addClass('hey');      
+        $(k[2]).addClass('hey');      
 
 
 </script>
