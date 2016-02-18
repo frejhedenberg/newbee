@@ -109,6 +109,18 @@
   </div>
 
 <squarespace:script src="site.js" combo="true"/>
+{.if collection.homepage}
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+<script>
+  
+      var k = jQuery('.slide').get().sort(function(){ 
+  return Math.round(Math.random())-0.5
+})
+        $(k).addClass('hey');      
+
+
+</script>
+{.end}
 {squarespace-footers}
 </body>
 </html>
