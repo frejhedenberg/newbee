@@ -323,9 +323,9 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
 
     },
 
-  /*  setupSlideshow: function(index) {
+    setupSlideshow: function(index) {
 
-      if (this.slideshow) return;
+    /*  if (this.slideshow) return;
 
       if (Y.Squarespace.Template.getTweakValue('galleryPadding')) {
         Y.one('#slideshowWrapper').setStyle('height', (parseInt(Y.one('body').getComputedStyle('height'),10) - (2 * parseInt(Y.Squarespace.Template.getTweakValue('galleryPadding'), 10))) + 'px');
@@ -385,10 +385,10 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
             type: 'resize'
           });
         }
-      }, this);
+      }, this);*/
 
     },
-*/
+
     showThumbnails: function() {
       Y.one('body').addClass('thumbnail-view');
 
