@@ -323,7 +323,7 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
 
     },
 
-    setupSlideshow: function(index) {
+  /*  setupSlideshow: function(index) {
 
       if (this.slideshow) return;
 
@@ -388,7 +388,7 @@ Y.use('node', 'squarespace-gallery-ng' ,'squarespace-image-loader', function(Y) 
       }, this);
 
     },
-
+*/
     showThumbnails: function() {
       Y.one('body').addClass('thumbnail-view');
 
