@@ -115,7 +115,7 @@
   
       var k = $('.slide').get().sort(function(){ 
   return Math.round(Math.random())-0.5
-})
+}).slice(0,5)
         $(k).remove();
 		$('.sqs-gallery').append($(k));     
 
